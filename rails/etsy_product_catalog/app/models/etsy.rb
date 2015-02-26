@@ -2,9 +2,7 @@ class Etsy
 	include HTTParty
 	base_uri 'https://openapi.etsy.com/v2/'
 
-	def initialize
 
-	end
 
 	# which can be :friends, :user or :public
 	# options[:query] can be things like since, since_id, count, etc.
