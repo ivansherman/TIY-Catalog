@@ -2,6 +2,9 @@ class Etsy
 	include HTTParty
 	base_uri 'https://openapi.etsy.com/v2/'
 
+
+	def 
+
 	def self.listings(which=:active)
 		get("/listings/#{which}?limit=100&offset=49900&api_key=#{api_key}")
 	end
