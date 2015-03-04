@@ -13,7 +13,8 @@
  *= require_tree .
  *= require_self
  */
- 
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,300italic,300,400italic);
+
 * {
   padding: 0;
   margin: 0;
@@ -25,9 +26,9 @@
 .nav_bar {
   text-align: left;
   font-size: 2.1em;
-  background-color: #16a085;
+  background-color: teal;
   padding: 20px;
-  color: #ecf0f1;
+  color: white;
   -moz-box-shadow:    1px 1px 3px 4px #ccc;
   -webkit-box-shadow: 1px 1px 3px 4px #ccc;
   box-shadow:         1px 1px 3px 4px #ccc;

@@ -3,14 +3,12 @@
     <div class="logo">
       <%= link_to 'ItsY', root_path, class: 'logo' %>
       <%= link_to( image_tag('cart.png', size: '40x40', class: 'cart').html_safe, '#') %>
-        <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Trending", '#' %></li>
-            <% if session[:user_id] %>
-              <li><%= link_to "Log out", '#'%></li>
-            <% else %>
-              <li><%= link_to "Log in", verify_path %></li>
-            <% end %>
-        </ul>
+          <% if session[:user_id] %>
+            <%= link_to "Log out", '#', class: "signup" %>
+          <% else %>
+            <%= link_to 'Login', verify_path, class: "signup" %>
+          <% end %>
+        <%= link_to "Home", root_path, class: "signup" %>
+        <%= link_to "Trending", '#', class: "signup" %>
     </div>
   </nav>
