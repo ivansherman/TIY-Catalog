@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150226192628) do
+ActiveRecord::Schema.define(version: 20150303214526) do
+
+  create_table "categories", force: :cascade do |t|
+    t.integer  "etsy_category_id"
+    t.string   "name"
+    t.string   "category_name"
+    t.string   "short_name"
+    t.string   "long_name"
+    t.integer  "num_children"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
 
   create_table "images", force: :cascade do |t|
     t.integer  "listing_image_id"
@@ -33,7 +44,7 @@ ActiveRecord::Schema.define(version: 20150226192628) do
     t.integer  "number_of_store_reviews"
     t.boolean  "is_supply"
     t.string   "state"
-    t.integer  "category_id"
+    t.integer  "etsy_category_id"
     t.float    "creation_tsz"
     t.integer  "quantity"
     t.string   "tags"
@@ -72,11 +83,14 @@ ActiveRecord::Schema.define(version: 20150226192628) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "listing"
-    t.string   "shop"
-    t.string   "etsy_user_name"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "login_name"
+    t.integer  "etsy_user_id"
+    t.string   "username"
+    t.string   "email"
+    t.string   "access_token"
+    t.string   "access_secret"
   end
 
 end

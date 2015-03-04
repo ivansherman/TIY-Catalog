@@ -3,10 +3,12 @@
 
 
   <h2><%= @listing.title %></h2>
-  <p><%= @listing.description %></p>
+    <div class="product_img"><%= image_tag("#{@listing.main_image}", size: "470x470") %>
+    </div> 
+      <p><%= @listing.description %></p>
 
-  <div class="to_the_right">
-    <h3>Price: $<%= @listing.price %></h3>
+    <div class="to_the_right">
+      <h3>Price: <%= number_to_currency(@listing.price) %></h3>
       <%= link_to "Add to Cart", "#", class: "btn btn-primary" %>
       <%= link_to 'Back', root_path, class: 'back_button' %>
     </div>
