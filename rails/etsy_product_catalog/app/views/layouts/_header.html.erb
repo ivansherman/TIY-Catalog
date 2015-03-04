@@ -1,7 +1,7 @@
 
   <nav class='nav_bar'>
     <div class="logo">
-      <%= link_to 'ItsY', root_path, class: 'logo' %>
+      <%= link_to 'ItsYard', root_path, class: 'logo' %>
       <%= link_to( image_tag('cart.png', size: '40x40', class: 'cart').html_safe, '#') %>
           <% if session[:user_id] %>
             <%= link_to "Log out", '#', class: "signup" %>
