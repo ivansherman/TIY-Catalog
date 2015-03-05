@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ListingTest < ActiveSupport::TestCase
+class CategoriesControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end

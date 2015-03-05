@@ -1,12 +1,20 @@
 Rails.application.routes.draw do
-  resources :listings 
+  resources :listings
+  resources :categories do
+    resources :listings
+  end
+
+  resources :listings do 
+    member do
+      post "add_to_cart"
+    end
+  end
+
+
   root 'listings#index'
 
   get 'verify' => 'sessions#verify'
 
-  ##get 'trending' => 'listings#index'
-  ##get 'shopping_cart' => 'users#shopping_cart'
-  ##post 'add_to_cart' => 
-
   get 'authorize' => 'sessions#authorize'
+
 end
